@@ -6,6 +6,7 @@ public class FaceDrawing {
     private String str;
     private int row;
     private int column;
+    private String replace;
 
 
     FaceDrawing(String[][] faceFeatures){
@@ -13,6 +14,7 @@ public class FaceDrawing {
         this.str = str;
         this.row = row;
         this.column = column;
+        this.replace = replace;
     }
 
     void edit(String replace, int row, int column){
@@ -22,6 +24,8 @@ public class FaceDrawing {
     void fill(String str){
 
     }
+
+    @Override
 
     String toString(){
         while (row <= faceFeatures.length){
