@@ -11,6 +11,6 @@ public class Runner {
         face1.edit(" ",0,0);
 
         System.out.println(face1);
-        
+
     }
 }

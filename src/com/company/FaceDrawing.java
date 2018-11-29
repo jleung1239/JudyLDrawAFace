@@ -7,14 +7,16 @@ public class FaceDrawing {
     private int row;
     private int column;
     private String replace;
+    private String face;
 
 
     FaceDrawing(String[][] faceFeatures){
-        faceFeatures = new String[][]{ };
+        this.faceFeatures = faceFeatures;
         this.str = str;
         this.row = row;
         this.column = column;
         this.replace = replace;
+        this.face = face;
     }
 
     void edit(String replace, int row, int column){
@@ -23,21 +25,31 @@ public class FaceDrawing {
     }
 
     void fill(String str){
-        
-
+        row = 0;
+        while (row < faceFeatures.length){
+            column = 0;
+            while(column < faceFeatures[row].length){
+                faceFeatures[row][column] = str;
+                column++;
+            }
+            row++;
+        }
     }
 
     @Override
 
-    String toString(){
-        while (row <= faceFeatures.length){
-            while (column <= faceFeatures[row].length){
-                System.out.print(faceFeatures[row][column]);
+    public String toString(){
+        face = "";
+        row = 0;
+        while (row < faceFeatures.length){
+            column = 0;
+            while (column < faceFeatures[row].length){
+                face = face + faceFeatures[row][column];
                 column++;
             }
             row++;
-            System.out.println();
         }
+        return face;
     }
 
 }
