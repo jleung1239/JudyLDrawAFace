@@ -47,7 +47,7 @@ public class FaceDrawing {
                 face = face + faceFeatures[row][column];
                 column++;
             }
-            face = face + "\n";
+            face = face + "\n"; //tells the string to indent or go to next line
             row++;
         }
         return face;

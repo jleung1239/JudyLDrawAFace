@@ -39,7 +39,7 @@ public class Runner {
         face1.edit("|", 4,6);
 
 
-        
+
         System.out.println(face1);
 
     }
