@@ -19,6 +19,7 @@ public class FaceDrawing {
         this.face = face;
     }
 
+
     void edit(String replace, int row, int column){
         faceFeatures[row][column] = replace;
 
@@ -36,7 +37,6 @@ public class FaceDrawing {
         }
     }
 
-    @Override
 
     public String toString(){
         face = "";
@@ -47,6 +47,7 @@ public class FaceDrawing {
                 face = face + faceFeatures[row][column];
                 column++;
             }
+            face = face + "\n";
             row++;
         }
         return face;
